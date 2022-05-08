@@ -2,6 +2,9 @@ let showYourChoice = document.getElementById('your-choice')
 let showCompChoice = document.getElementById('comp-choice')
 let result = document.getElementById('result')
 
+let yourScore = document.getElementById('your-score')
+let compScore = document.getElementById('comp-score')
+
 let options = document.querySelectorAll('button')
 
 let userchoice;
@@ -47,4 +50,5 @@ function compChoice() {
     if(showYourChoice.innerHTML == "Scissors" && showCompChoice.innerHTML == "Scissors") {
         result.innerHTML = "It's a draw!"
     }
+
 }
