@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+}
+body {
+    background-color: rgb(37, 37, 37);
+}
+
+p {
+    color: white;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .title {
@@ -10,6 +22,15 @@
     justify-content: center;
     align-items: center;
     font-size: 2.5rem;
+}
+
+h1 {
+    color: white;
+    padding-bottom: 20px;
+    width: 60%;
+    text-align: center;
+    border-bottom: 3px solid white;
+    font-family: 'Exo 2', sans-serif;
 }
 
 .container {
@@ -23,15 +44,20 @@
 .scores,
 .display-choices,
 .result,
-.options {
+.options-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    border: 1px solid black;
     width: 100%;
     font-size: 2rem;
     height: 20vh;
+}
+
+.scores,
+.display-choices,
+.result {
+    border-bottom: 2px solid white;
 }
 
 .scores p,
@@ -45,10 +71,58 @@
     margin: 20px;
 }
 
+.options {
+    padding-left: 17.5vw;
+}
+
 button {
-    width: 200px;
-    height: 80px;
     font-size: 1.5rem;
     margin: 5vh 3vw;
     cursor: pointer;
+    border: none;
+    transition: 0.4s cubic-bezier(0.42, 0.4, 1, 1);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.option {
+    width: 200px;
+    height: 80px;
+    font-family: 'Exo 2', sans-serif;
+}
+
+#Rock:hover {
+    color: red;
+    border: 2px solid red;
+    background-color: black;
+}
+
+#Paper:hover {
+    color: lime;
+    border: 2px solid lime;
+    background-color: black;
+}
+
+#Scissors:hover {
+    color: blue;
+    border: 2px solid blue;
+    background-color: black;
+}
+
+.reset-container {
+    padding-left: 5vw;
+}
+
+#reset {
+    width: 160px;
+    height: 60px;
+    font-family: 'Oxygen', sans-serif;
+    font-style: italic;
+}
+
+#reset:hover {
+    box-shadow: 8px 8px 0 purple;
+    top: -5px;
+    left: -5px;
 }

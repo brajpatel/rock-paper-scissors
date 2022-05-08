@@ -27,7 +27,7 @@ function compChoice() {
 
     if(showYourChoice.innerHTML == "Rock" && showCompChoice.innerHTML == "Rock") {
         result.innerHTML = "It's a draw!"
-        result.style.color = "Black"
+        result.style.color = "Aqua"
     }
     if(showYourChoice.innerHTML == "Rock" && showCompChoice.innerHTML == "Paper") {
         result.innerHTML = "You lost this round!"
@@ -36,17 +36,17 @@ function compChoice() {
     }
     if(showYourChoice.innerHTML == "Rock" && showCompChoice.innerHTML == "Scissors") {
         result.innerHTML = "You won this round!"
-        result.style.color = "Green"
+        result.style.color = "Lime"
         yourScore.textContent = playerScore++
     }
     if(showYourChoice.innerHTML == "Paper" && showCompChoice.innerHTML == "Rock") {
         result.innerHTML = "You won this round!"
-        result.style.color = "Green"
+        result.style.color = "Lime"
         yourScore.textContent = playerScore++
     }
     if(showYourChoice.innerHTML == "Paper" && showCompChoice.innerHTML == "Paper") {
         result.innerHTML = "It's a draw!"
-        result.style.color = "Black"
+        result.style.color = "Aqua"
     }
     if(showYourChoice.innerHTML == "Paper" && showCompChoice.innerHTML == "Scissors") {
         result.innerHTML = "You lost this round!"
@@ -60,21 +60,32 @@ function compChoice() {
     }
     if(showYourChoice.innerHTML == "Scissors" && showCompChoice.innerHTML == "Paper") {
         result.innerHTML = "You won this round!"
-        result.style.color = "Green"
+        result.style.color = "Lime"
         yourScore.textContent = playerScore++
     }
     if(showYourChoice.innerHTML == "Scissors" && showCompChoice.innerHTML == "Scissors") {
         result.innerHTML = "It's a draw!"
-        result.style.color = "Black"
+        result.style.color = "Aqua"
     }
     if(playerScore > 5) {
         result.innerHTML = "YOU WIN!"
-        result.style.color = "Green"
+        result.style.color = "Lime"
     }
     if(computerScore > 5) {
         result.innerHTML = "YOU LOST!"
     }
-
+    if(playerScore > computerScore) {
+        yourScore.style.color = "Lime"
+        compScore.style.color = "Red"
+    }
+    if(playerScore < computerScore) {
+        yourScore.style.color = "Red"
+        compScore.style.color = "Lime"
+    }
+    if(playerScore === computerScore) {
+        yourScore.style.color = "Blue"
+        compScore.style.color = "Blue"
+    }
 }
 
 let resetBtn = document.getElementById('reset')
